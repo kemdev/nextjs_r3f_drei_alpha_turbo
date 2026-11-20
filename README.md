@@ -2,7 +2,13 @@
 
 A Simple Next.js App Router starter for React Three Fiber v10 alpha, Drei alpha, and Three.js Shading Language (TSL). It includes interactive scene navigation, React Spring animations, and live material controls in the Three.js Inspector. All scenes use `WebGPURenderer`, with Three.js's WebGL2 fallback for browsers without WebGPU.
 
-[<img src="https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/blob/main/public/images/demo.png" width="250"/>](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo)
+<!-- [<img src="https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/blob/main/public/images/demo.png" width="250"/>](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo) -->
+
+<kbd>
+<p align="center">
+<img src="https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/blob/main/public/images/demo.png" width="250" height="250" alt="Demo" />
+</p>
+</kbd>
 
 ## Demo
 Check the [Demo](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo/) online.
