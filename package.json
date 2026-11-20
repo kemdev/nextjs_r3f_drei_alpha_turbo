@@ -12,10 +12,10 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@react-three/fiber": "10.0.0-alpha.6",
     "@react-spring/three": "11.0.0-beta.1",
     "@react-three/drei": "11.0.0-alpha.7",
     "@react-three/eslint-plugin": "1.0.0-alpha.6",
-    "@react-three/fiber": "10.0.0-alpha.6",
     "@react-three/tsl": "10.0.0-alpha.6",
     "@tailwindcss/postcss": "^4.3.5",
     "lucide-react": "^1.75.0",
@@ -25,6 +25,11 @@
     "react-dom": "19.2.8",
     "tailwindcss": "^4.3.5",
     "three": "^0.187.0"
+  },
+  "overrides": {
+    "@react-spring/three": {
+      "@react-three/fiber": "10.0.0-alpha.6"
+    }
   },
   "devDependencies": {
     "@playwright/test": "1.65.1",
