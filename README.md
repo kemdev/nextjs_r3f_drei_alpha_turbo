@@ -16,6 +16,19 @@ Check the [Demo](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo/) online.
 ## Getting Started
 Use Node.js 20.9 or later and Bun 1.4.2.
 
+Create a project from the public GitHub repository:
+
+```sh
+npx create-next-app@latest my-app --example https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo --use-bun --skip-install
+cd my-app
+bun install
+bun run dev
+```
+
+Replace `my-app` with your project name. `create-next-app` downloads the starter into a new directory. Bun migrates the included npm lockfile when installing.
+
+If you already have a copy of the project:
+
 ```sh
 bun install
 bun run dev
@@ -92,7 +105,7 @@ bun run build
 bun run start
 ```
 
-`dev` and `build` use Turbopack. Keep `bun.lock` with the project so a fresh fork or download installs the same dependency versions.
+`dev` and `build` use Turbopack. The repository includes `package-lock.json`; Bun creates `bun.lock` when it migrates that lockfile.
 
 With the locked versions, the build can emit an `addEffect` deprecation warning from React Spring's R3F adapter. The production build still completes.
 
