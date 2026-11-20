@@ -7,9 +7,17 @@ A Next.js App Router starter for React Three Fiber v10 alpha, Drei alpha, and Th
 Use Node.js 20.9 or later and Bun 1.4.2.
 
 ```sh
-bun install --frozen-lockfile
+bun install
 bun run dev
 ```
+
+<details> 
+<summary>NPM</summary>
+```sh
+npm i
+npm run dev
+
+</details>
 
 Open [localhost:3000](http://localhost:3000). The starter runs without environment variables.
 
@@ -86,4 +94,4 @@ bun run test:e2e
 
 Locally, Playwright starts the development server on port 3000 or reuses the running starter on that port. CI starts its own server on port 3100. The suite covers keyboard navigation, reduced-motion hover icons, mesh navigation, both Inspector controls, and a real Fast Refresh edit on a directly loaded route. The Fast Refresh test temporarily edits and restores the cube view. The suite uses software WebGL2 so it can run on machines without a GPU.
 
-GitHub Actions runs the frozen install, type check, production build, and browser suite on pull requests and pushes to `main`.
+GitHub Actions runs the frozen install, type check, production build, and browser suite on pull requests and pushes to `main`.i
