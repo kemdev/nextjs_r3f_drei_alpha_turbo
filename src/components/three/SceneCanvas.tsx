@@ -1,3 +1,4 @@
+"use client";
 import { OrbitControls } from "@react-three/drei/core";
 import { Canvas, useThree } from "@react-three/fiber";
 import type { WebGPUCanvasProps } from "@react-three/fiber/webgpu";

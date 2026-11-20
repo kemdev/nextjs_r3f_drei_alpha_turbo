@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import { color, uniform } from "three/tsl";
 
-const CubeDemo = dynamic(() => import("./CubeDemo"), { ssr: false });
+const CubeScene = dynamic(() => import("./CubeScene"), { ssr: false });
 
 export default function CubeView() {
   const cubeColor = useMemo(() => uniform(color(0x679cf4)), []);
@@ -20,7 +20,7 @@ export default function CubeView() {
           material.addColor(cubeColor, "value").name("Color");
         }}
       />
-      <CubeDemo colorNode={cubeColor} href="/" />
+      <CubeScene colorNode={cubeColor} href="/" />
     </SceneCanvas>
   );
 }

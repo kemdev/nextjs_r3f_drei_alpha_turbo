@@ -1,3 +1,5 @@
+
+import SceneCanvas from '@/components/three/SceneCanvas';
 import "@/styles/globals.css";
 import Navbar from "@/ui/Navbar";
 
@@ -15,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning>
         <Navbar />
-        <main className="app-main">{children}</main>
+        <main className="app-main">
+            {children}
+        </main>
       </body>
     </html>
   );

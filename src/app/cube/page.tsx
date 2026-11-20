@@ -1,8 +1,6 @@
 import CubeView from "@/features/scenes/cube/CubeView";
-
-export const metadata = {
-  title: "Standard cube",
-};
+import { useMemo } from "react";
+import { color, uniform } from "three/tsl";
 
 export default function CubePage() {
   return <CubeView />;

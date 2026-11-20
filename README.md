@@ -28,32 +28,42 @@ Open [localhost:3000](http://localhost:3000). The starter runs without environme
 
 ## Project structure
 
-```text
-public/                     Static assets such as models and textures
-src/
-  app/                      Route entry points and root layout
-  components/
-    three/                  Shared Canvas, Inspector, and object interactions
-    ui/                     Drei Html wrapper for the scene navigation icons
-  features/scenes/
-    overview/               Home scene and object destinations
-    cube/                   Cube geometry, demo adapter, and detail view
-    tsl/                    TSL shader, demo adapter, and detail view
-  styles/                   Tailwind CSS entry point and canvas layout
-  ui/                       Navbar and active route styling
+```
+┣ 📂public                       Static assets such as models and textures
+ ┣ 📂src                       
+ ┃ ┣ 📂app                       Route entry points and root layout
+ ┃ ┣ 📂components                Shared Canvas, orbit controls, and Inspector
+ ┃ ┃ ┣ 📂three                       
+ ┃ ┃ ┗ 📂ui                      Drei Html wrapper for the scene navigation icons
+ ┃ ┣ 📂features                       
+ ┃ ┃ ┗ 📂scenes                       
+ ┃ ┃ ┃ ┣ 📂cube                  Cube material, interaction, and detail view    
+ ┃ ┃ ┃ ┣ 📂overview              Home scene and object destinations         
+ ┃ ┃ ┃ ┗ 📂tsl                   TSL shader, interaction, and detail view    
+ ┃ ┣ 📂lib                       
+ ┃ ┣ 📂styles                    Tailwind CSS entry point and canvas layout   
+ ┃ ┗ 📂ui                        Navbar and active route styling
 ```
 
-Start with `src/features/scenes/overview/OverviewView.tsx` to change the home scene. Put feature-specific cameras, uniforms, and Inspector settings in the feature's view. `CubeScene` and `TslScene` render under any `SceneCanvas`. The demo adapters wrap them in `InteractiveSceneObject` to add hover animations, icons, and navigation.
+Start with `src/features/scenes/overview/OverviewView.tsx` to change the home scene. Each scene contains its material, hover animation, icon, and navigation. The detail views provide their cameras and Inspector uniforms.
 
-To add a route, create a client view under `src/features/scenes/`, render it from a page in `src/app/`, and add its link to `src/ui/Navbar.tsx`. The two detail views use `next/dynamic` with `ssr: false` to load their demo adapters in the browser. The overview composes both adapters and supplies their destinations.
+To add a route, create a client view under `src/features/scenes/`, render it from a page in `src/app/`, and add its link to `src/ui/Navbar.tsx`. The two detail views use `next/dynamic` with `ssr: false` to load their scenes in the browser. The overview composes both scenes and supplies their destinations.
 
 ## Inspector and Fast Refresh
 
-`SceneInspector` attaches the native Three.js Inspector. Drei 11.0.0-alpha.7's Inspector wrapper calls an API removed in Three.js r187. Each detail view shares its material uniform with the Inspector. `SceneCanvas` binds OrbitControls to the canvas element so the Inspector can receive clicks.
+`SceneInspector` attaches the native Three.js Inspector. Drei 11.0.0-alpha.7's Inspector wrapper calls an API removed in Three.js r187.
+
+> [!WARNING] ⚠️
+> Drei Inspector produce an error, and must be updated to Drei later when the library is updated.
+
+Each detail view shares its material uniform with the Inspector. `SceneCanvas` binds OrbitControls to the canvas element so the Inspector can receive clicks.
 
 Material keys and the Inspector effect let material instances and Inspector bindings refresh when their inputs change. `OverviewView` shows how to use `SceneCanvas` without an Inspector.
 
-The navbar uses Next.js `Link` and mesh clicks use `router.push`, enabling client-side navigation. If Fast Refresh stops updating after navigation during development, reload the destination page once. [Turbopack issue #98699](https://github.com/vercel/next.js/issues/98699)
+The navbar uses Next.js `Link` and mesh clicks use `router.push`, enabling client-side navigation.
+
+> [!NOTE] 💡
+> If Fast Refresh stops updating after navigation during development, reload the destination page once. Turbopack issue #98699
 
 ## Check and serve a production build
 

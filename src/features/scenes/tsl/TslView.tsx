@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import { uniform } from "three/tsl";
 
-const TslDemo = dynamic(() => import("./TslDemo"), { ssr: false });
+const TslScene = dynamic(() => import("./TslScene"), { ssr: false });
 
 export default function TslView() {
   const blue = useMemo(() => uniform(0.35), []);
@@ -21,7 +21,7 @@ export default function TslView() {
           gradient.add(blue, "value", 0, 1, 0.01).name("Blue channel");
         }}
       />
-      <TslDemo blue={blue} href="/" />
+      <TslScene blue={blue} href="/" />
     </SceneCanvas>
   );
 }
