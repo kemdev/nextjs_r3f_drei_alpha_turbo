@@ -1,9 +1,13 @@
 # Next.js WebGPU starter
 
-A Next.js App Router starter for React Three Fiber v10 alpha, Drei alpha, and Three.js Shading Language (TSL). It includes interactive scene navigation, React Spring animations, and live material controls in the Three.js Inspector. All scenes use `WebGPURenderer`, with Three.js's WebGL2 fallback for browsers without WebGPU.
+A Simple Next.js App Router starter for React Three Fiber v10 alpha, Drei alpha, and Three.js Shading Language (TSL). It includes interactive scene navigation, React Spring animations, and live material controls in the Three.js Inspector. All scenes use `WebGPURenderer`, with Three.js's WebGL2 fallback for browsers without WebGPU.
 
-## Run locally
+![Demo](https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/tree/main/public/imagesdemo.png)
 
+## Demo
+Check the [Demo](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo/) online.
+
+## Getting Started
 Use Node.js 20.9 or later and Bun 1.4.2.
 
 ```sh
@@ -15,12 +19,12 @@ bun run dev
 <summary>NPM</summary>
 
 ```sh
-npm i
-npm run dev
+ npm i
+ npm run dev
 ```
+
 </details>
 
-Open [localhost:3000](http://localhost:3000). The starter runs without environment variables.
 
 | Route | Example |
 | --- | --- |

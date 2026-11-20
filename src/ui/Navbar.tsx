@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="z-10 mx-auto mt-10 flex w-full max-w-7xl flex-wrap gap-x-3 gap-y-1 px-3 text-base sm:gap-x-8 sm:text-xl"
+      className="z-10 mx-auto mt-10 flex w-full max-w-3xl flex-wrap gap-x-3 gap-y-1 px-3 text-base sm:gap-x-8 sm:text-xl"
       aria-label="Scenes"
     >
       {NAV_LINKS.map(({ href, label }) => {
