@@ -11,12 +11,13 @@ bun install
 bun run dev
 ```
 
-<details> 
+<details>
 <summary>NPM</summary>
+
 ```sh
 npm i
 npm run dev
-
+```
 </details>
 
 Open [localhost:3000](http://localhost:3000). The starter runs without environment variables.
