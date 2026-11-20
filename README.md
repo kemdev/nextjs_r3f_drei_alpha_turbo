@@ -4,11 +4,11 @@ A Simple Next.js App Router starter for React Three Fiber v10 alpha, Drei alpha,
 
 <!-- [<img src="https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/blob/main/public/images/demo.png" width="250"/>](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo) -->
 
-<kbd>
 <p align="center">
+<kbd>
 <img src="https://github.com/kemdev/nextjs_r3f_drei_alpha_turbo/blob/main/public/images/demo.png" width="250" height="250" alt="Demo" />
-</p>
 </kbd>
+</p>
 
 ## Demo
 Check the [Demo](https://kemdev.github.io/nextjs_r3f_drei_alpha_turbo/) online.
